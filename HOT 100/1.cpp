@@ -34,12 +34,12 @@ class Solution2 {
         sort(nums.begin(), nums.end());
         int i = 0, j = (int)nums.size() - 1;
         while (i < j) {
-            if (nums[i] + nums[j] > target) {
-                j--;
-            } else if (nums[i] + nums[j] == target) {
-                break;
-            } else {
+            if (nums[i] + nums[j] < target) {
                 i++;
+            } else if (nums[i] + nums[j] > target) {
+                j--;
+            } else {
+                break;
             }
         }
         if (i < j) {
