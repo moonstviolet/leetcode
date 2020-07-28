@@ -8,6 +8,7 @@ package main
 
 import "fmt"
 
+//扫一遍,记录以已经出现的最小值,用当前值去减,维护答案
 func maxProfit(prices []int) int {
 	if len(prices) == 0 {
 		return 0
